@@ -3,3 +3,6 @@
 
 //Thunder client this used for insted of api's checking in postman
 //install from extention to apis in http clients like postman
+
+
+//Controler contains all logic for the request response it going to connect our database
