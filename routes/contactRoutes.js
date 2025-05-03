@@ -1,17 +1,25 @@
 const express = require('express');
-const { getContacts, createContact, deleteContact, createContacts, updateContact } = require('../controllers/contactController');
+const { getContacts, getContact, deleteContact, createContacts, updateContact } = require('../controllers/contactController');
 const router = express.Router();
 
-router.route("/").get(getContacts);
+// router.route("/").get(getContacts);
 
-router.route("/:id").get(createContact);
+// router.route("/:id").get(createContact);
 
-router.route("/:id").post(createContact);
+// router.route("/").post(createContact);
 
-router.route("/:id").put(updateContact);
+// router.route("/:id").put(updateContact);
 
 
-router.route("/:id").delete(deleteContact);
+// router.route("/:id").delete(deleteContact);
+
+//above most common routes now simplifying
+
+router.route("/").get(getContacts).post(createContacts);
+
+router.route("/:id").get(getContact).put(updateContact).delete(deleteContact);
+
+
 
 
 module.exports = router

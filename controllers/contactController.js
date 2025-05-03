@@ -10,8 +10,8 @@ const getContacts = (req,res) => {
 //@route PUT /api/contacts
 //@access public
 
-const createContact = (req,res) => {
-    res.status(200).json({message:`create contact ${req.params.id}`})
+const getContact = (req,res) => {
+    res.status(200).json({message:`Get contact ${req.params.id}`})
 }
 
 const createContacts = (req,res) => {
@@ -35,4 +35,4 @@ const updateContact = (req,res) => {
 }
 
 
-module.exports = {getContacts,createContact,createContacts,deleteContact,updateContact}
+module.exports = {getContacts,getContact,createContacts,deleteContact,updateContact}
