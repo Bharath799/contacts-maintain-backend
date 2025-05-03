@@ -1,0 +1,5 @@
+//install env file
+// npm i dotenv
+
+//Thunder client this used for insted of api's checking in postman
+//install from extention to apis in http clients like postman
