@@ -13,7 +13,8 @@ const router = express.Router();
 
 // router.route("/:id").delete(deleteContact);
 
-//above most common routes now simplifying
+//above most common routes now simplifying 
+//multiple https methods here only declaring
 
 router.route("/").get(getContacts).post(createContacts);
 
