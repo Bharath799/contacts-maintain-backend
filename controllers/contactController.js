@@ -22,13 +22,18 @@ const getContact = asyncHandler(async (req, res) => {
 });
 
 const createContacts = asyncHandler(async (req, res) => {
-  console.log("Request Recived Hello", req.body);
-  const { name, Address, Contact } = req.body;
-  if (!name || !Address || !Contact) {
+  const { name, email, phone } = req.body;
+  if (!name || !email || !phone) {
     res.status(400);
     throw new Error("All Fields Mandatory");
   }
-  res.status(200).json({ message: req.body });
+
+  const contact = await Contacts.create({
+    name,
+    email,
+    phone,
+  });
+  res.status(200).json({ message: contact });
 });
 
 //@desc Delete contacts
