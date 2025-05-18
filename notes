@@ -4,7 +4,6 @@
 //Thunder client this used for insted of api's checking in postman
 //install from extention to apis in http clients like postman
 
-
 //Controler contains all logic for the request response it going to connect our database
 
 //status code updatation 34 min
@@ -12,3 +11,5 @@
 //Created mongoDB connection
 
 //creating schema for models
+
+//create crud operations
