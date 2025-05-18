@@ -6,8 +6,11 @@
 
 const express = require("express");
 const errorHandler = require("./middleware/errorhandler");
+const { connect } = require("mongoose");
+const connectDB = require("./config/dbConnection");
 const env = require("dotenv").config();
 
+connectDB()
 const app = express();
 
 const port = process.env.PORT || 5000;

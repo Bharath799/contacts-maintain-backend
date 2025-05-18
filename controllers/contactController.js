@@ -1,4 +1,8 @@
+//mongoDB always get promise to resolve it we need add try catch block in each function of async
+//instead of async we are using express middleware 'express-async-handler' it handle the exceptions in side of async express routes
+//so we dont have to write all the try catch block in order to catch errors 'asyncHandler' will automatically call errorHandler when exception occur
 const asyncHandler = require("express-async-handler")
+
 //@desc Get all contacts
 //@route GET /api/contacts
 //@access public
