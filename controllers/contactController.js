@@ -8,6 +8,7 @@ const Contacts = require("../models/contactModel");
 //@route GET /api/contacts
 //@access public
 
+//getting all contacts
 const getContacts = asyncHandler(async (req, res) => {
   const contacts = await Contacts.find();
   res.status(200).json({ message: contacts });
@@ -17,6 +18,7 @@ const getContacts = asyncHandler(async (req, res) => {
 //@route PUT /api/contacts
 //@access public
 
+//get Contact By ID
 const getContact = asyncHandler(async (req, res) => {
   console.log("params_id", req.params.id);
 
