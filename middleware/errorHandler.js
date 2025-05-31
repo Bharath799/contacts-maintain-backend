@@ -1,6 +1,7 @@
 const { statusCodeError } = require("./statusCodeMap");
 
 const errorHandler = (err, req, res, next) => {
+  console.log("ErrorCodes", res.statusCode);
   const statusCode = res.statusCode ? res.statusCode : 500;
   res.json({ message: err.message, stackTrace: err.stack });
   switch (statusCode) {
