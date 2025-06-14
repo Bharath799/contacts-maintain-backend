@@ -10,7 +10,7 @@ const { connect } = require("mongoose");
 const connectDB = require("./config/dbConnection");
 const env = require("dotenv").config();
 
-connectDB()
+connectDB();
 const app = express();
 
 const port = process.env.PORT || 5000;
@@ -22,10 +22,13 @@ app.use(express.json());
 //     res.send({message:"Get Contacts"})
 // })
 //middle ware
-app.use("/app/contacts",require("./routes/contactRoutes"));
-app.use(errorHandler)  //For Handle Error
+app.use("/app/contacts", require("./routes/contactRoutes"));
 
+//Creating authentication
+app.use("/app/user", require("./routes/userRoutes"));
 
-app.listen(port,() =>{
-    console.log("server started on :",port); 
-})
+app.use(errorHandler); //For Handle Error
+
+app.listen(port, () => {
+  console.log("server started on :", port);
+});
